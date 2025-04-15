@@ -1,0 +1,17 @@
+@if(_modalService.modalOpened === true){
+<main>
+    <div class="modal">
+        @if(_modalService.modalPage === 'about-me'){
+        <app-about-me />
+        } @else if(_modalService.modalPage === 'works'){
+        <app-works />
+        } @else if (_modalService.modalPage === 'side-projects') {
+        <app-side-projects />
+        } @else if (_modalService.modalPage === 'guest-book') {
+        <app-guest-book />
+        } @else if (_modalService.modalPage === 'daily-slab') {
+        <app-daily-slab />
+        }
+    </div>
+</main>
+}

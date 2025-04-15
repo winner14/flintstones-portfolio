@@ -1,0 +1,74 @@
+<main>
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-img">
+                <img src="assets/bg/hero-bg.svg" alt="">
+            </div>
+            <div class="hero-txt">
+                <div class="bones">
+                    <img src="assets/images/hero-bones.svg" alt="">
+                </div>
+                <h1>Kpodo Winner Junior</h1>
+                <p>Full-Stack Developer</p>
+            </div>
+        </div>
+    </div>
+    <div class="tabs">
+        @for (tab of tabs; track $index) {
+        <div class="tab">
+            <img src="{{tab.img}}" alt="">
+        </div>
+        }
+    </div>
+
+    <div class="content">
+        <div class="side">
+            <div class="socials">
+                facebook
+                twitter
+                github
+                linkedin
+            </div>
+            <div class="social-tv">
+                <img src="assets/images/social-tv.svg" alt="">
+                <div class="social-tv-txt">
+                    <p>Network</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="brief">
+            <div class="bg-img">
+                <img src="assets/bg/stone-slab.svg" alt="">
+            </div>
+            <div class="brief-txt">
+                <p>
+                    With over a year of professional experience in web and mobile app development, I've honed my skills
+                    in creating dynamic, user-centric applications with high focus on good UI/UX practices. I specialize
+                    in Angular, Flutter, and some backend development with Go. I'm currently learning Ruby &
+                    Ruby on Rails. <br> <br>
+                    I love challenging myself with new projects and technologies, and I'm always looking for
+                    opportunities to grow(I regret this sometimes 😅). <br>
+                </p>
+            </div>
+        </div>
+
+        <div class="brief">
+            <div class="bg-img">
+                <img src="assets/bg/stone-slab.svg" alt="">
+            </div>
+            <div class="brief-txt experience">
+                <h3>Relevant Experience <span class="light-txt">{{"(2022 - now)"}}</span></h3>
+                @for (experience of workExpirences; track $index) {
+                <p>{{experience.role}} - <b>{{experience.company}}</b></p>
+                }
+            </div>
+        </div>
+
+        <div class="side">
+            <div class="contact">
+                <img src="assets/images/phone.svg" alt="">
+            </div>
+        </div>
+    </div>
+</main>

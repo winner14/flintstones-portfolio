@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: caveat-brush, sans-serif;
+}
+
+// colors
+$primary-color: #dcddd7;
+$secondary-color: #74797c;
+$text-color: #393a36;
+
+// spacing
+$space-xxs: 0.25rem;
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 3rem;
+$space-xxl: 5rem;
+
+
+//functions
+@function text-shadow() {
+    @return 1px 1px 1px #74797c, 1px 1px 1px #74797c, 1px 1px 1px #74797c;
+}
+
+//uni styles
+.light-txt {
+    font-weight: 300;
+}
+
+// keyframes
+@keyframes shake {
+    0% {
+        transform: translate(0);
+        transition: all 0.1s ease-in-out;
+    }
+
+    25% {
+        transform: translate(-1px, -1px);
+        transition: all 0.1s ease-in-out;
+    }
+
+    50% {
+        transform: translate(1px, 1px);
+        transition: all 0.1s ease-in-out;
+    }
+
+    75% {
+        transform: translate(-1px, -1px);
+        transition: all 0.1s ease-in-out;
+    }
+
+    100% {
+        transform: translate(0);
+        transition: all 0.1s ease-in-out;
+    }
+}
+
+@keyframes raise-up {
+    from {
+        transform: translateY(0);
+        transition: all 0.1s ease-in;
+    }
+
+    to {
+        transform: translateY(-2px);
+        transition: all 0.1s ease-in;
+    }
+
+}
+
+// animations
