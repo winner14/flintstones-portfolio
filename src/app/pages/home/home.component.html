@@ -15,7 +15,7 @@
     </div>
     <div class="tabs">
         @for (tab of tabs; track $index) {
-        <div class="tab">
+        <div class="tab" (click)="onTab(tab.page)">
             <img src="{{tab.img}}" alt="">
         </div>
         }

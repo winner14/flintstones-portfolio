@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ModalService } from '../../services/modal/modal.service';
 
 @Component({
   selector: 'app-home',
@@ -7,26 +8,27 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  _modalService = inject(ModalService);
 
   tabs = [
     {
-      name: 'About Me',
+      page: 'about-me',
       img: 'assets/bg/about.svg',
     },
     {
-      name: 'Works',
+      page: 'works',
       img: 'assets/bg/works.svg',
     },
     {
-      name: 'Side Projects',
+      page: 'side-projects',
       img: 'assets/bg/side-projects.svg',
     },
     {
-      name: 'Guest Book',
+      page: 'guest-book',
       img: 'assets/bg/guest-book.svg',
     },
     {
-      name: 'The Daily Slab',
+      page: 'daily-slab',
       img: 'assets/bg/daily-slab.svg',
     }
   ];
@@ -48,5 +50,9 @@ export class HomeComponent {
       date: '2023 - Present',
     },
   ];
+
+  onTab(page: string) {
+    this._modalService.toggleModal(page);
+  }
 
 }

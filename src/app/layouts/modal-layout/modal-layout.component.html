@@ -1,6 +1,6 @@
 @if(_modalService.modalOpened === true){
-<main>
-    <div class="modal">
+<main (click)="_modalService.modalOpened = false">
+    <div class="modal" (click)="$event.stopPropagation()">
         @if(_modalService.modalPage === 'about-me'){
         <app-about-me />
         } @else if(_modalService.modalPage === 'works'){
